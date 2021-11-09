@@ -11,7 +11,7 @@ give you the freedom to customize your page, as such mark down pages can really 
 4. presentations
 
 ## Images can be placed down too!  
-![image info](image/img_20210314_192936.jpg)  
+![MBS photo](/image/mbs.jpg "This is at MBS")  
 There is a lot more functions available and you could use websites such as [Markdown Live Preview](https://markdownlivepreview.com/).  
 
 but overall needing to learn a new language just for a simple website is going to be a huge pain and I would rather go back to using HTML.  
