@@ -12,7 +12,7 @@ give you the freedom to customize your page, as such mark down pages can really 
 
 ## Images can be placed down too!  
 ![image info](image/img_20210314_192936.jpg)  
-There is a lot more functions avaliable and you could use websites such as [Markdown Live Preview](https://markdownlivepreview.com/).  
+There is a lot more functions available and you could use websites such as [Markdown Live Preview](https://markdownlivepreview.com/).  
 
 but overall needing to learn a new language just for a simple website is going to be a huge pain and I would rather go back to using HTML.  
 still here are some reasons why using markdown is good: [Markdown guide](https://www.markdownguide.org/getting-started/)  
