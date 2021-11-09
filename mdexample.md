@@ -18,6 +18,6 @@ but overall needing to learn a new language just for a simple website is going t
 still here are some reasons why using markdown is good: [Markdown guide](https://www.markdownguide.org/getting-started/)  
 You can see my reasons back at the main page.
 
-| [Main Page](https://ongjingkai.github.io/testt/index.html) | 
-[About me](https://ongjingkai.github.io/testt/aboutme.html) |
-[Projects](https://ongjingkai.github.io/testt/placeholder.html) |
+| [Main Page](index.html) |
+[About me](aboutme.html) |
+[Projects](placeholder.html) |
