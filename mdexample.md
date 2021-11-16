@@ -21,3 +21,5 @@ You can see my reasons back at the main page.
 | [Main Page](index.html) |
 [About me](aboutme.html) |
 [Projects](placeholder.html) |
+
+<script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
