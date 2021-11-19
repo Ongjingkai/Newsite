@@ -128,6 +128,6 @@ s{text-decoration-thickness: 3px;}
 img {border: 5px solid #2F4F4F;}
 iframe{border-radius: 10px; border: 5px solid #1C5F58;}
 h3,h2{margin: 0;}
-h2{text-align: center; font-size: 50px;}
-h3{font-size:30px;}
-h4{font-size:18px;}
+h2{text-align: center; font-size: 3vw;}
+h3{font-size:1.4vw;}
+h4{font-size:1.3vw;}
