@@ -108,6 +108,14 @@ border-radius: 10px;
 text-align:left;
 }
 
+#boxce{
+padding:3px;
+background-color: #335F6A;
+border-radius: 10px;
+margin-left: 200px;
+margin-right:200px;
+}
+
 #footer{
 clear:both;
 color:white;
