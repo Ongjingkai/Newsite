@@ -82,6 +82,12 @@ padding: 8px 20px 8px 20px;
 font-weight: bold;
 }
 
+#dnav table {
+width:100%;
+border: 1px solid black;
+border-collapse: collapse;
+}
+
 
 
 
@@ -131,6 +137,27 @@ margin-right: auto;
 display: block;
 margin-left: auto;
 margin-right: auto;
+}
+
+table.GeneratedTable {
+  width: 100%;
+  background-color: #121111;
+  border-collapse: collapse;
+  border-width: 2px;
+  border-color: #696554;
+  border-style: solid;
+  color: #f8f2f2;
+}
+
+table.GeneratedTable td, table.GeneratedTable th {
+  border-width: 2px;
+  border-color: #696554;
+  border-style: solid;
+  padding: 2vh;
+}
+
+table.GeneratedTable thead {
+  background-color: #88867c;
 }
 
 s{text-decoration-thickness: 3px;}
