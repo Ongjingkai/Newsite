@@ -7,18 +7,27 @@
   </head>
   <body>
 <!--Navigation tab below-->
-    <div id="navigation">
-      <nav>
-        <ul>
-          <li><a href="index.html">Main</a></li>
-          <li><a href="aboutme.html">About Me</a></li>
-          <li><a href="doc.html">Documentation</a></li>
-          <li><a href="jwsitetemp/jwsite.html">Johnwhile template</a></li>
-          <li><a class="active" href="tools.html">Tools</a></li>
-        </ul>
-      </nav>
-    </div>
+<div id="navigation">
+  <nav>
+    <ul>
+      <li><a href="index.html">Main</a></li>
+      <li><a href="aboutme.html">About Me</a></li>
+      <li class="dropdown">
+          <a href:"javascript:void(0)" class="dropbtn">Documentation</a>
+          <div class="dropdown-content">
+            <a href="projects/web.html">Website<br>Development</a>
+            <a href="projects/graphics_creation.html">Computer<br>Graphics</a>
+            <a href="projects/cad.html">CAD</a>
+            <a href="projects/printing.html">3D Printing</a>
+          </div>
+      </li>
+      <li><a href="jwsitetemp/jwsite.html">Johnwhile template</a></li>
+      <li><a class="active" href="tools.html">Tools</a></li>
+    </ul>
+  </nav>
+</div>
 
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 <!--content-->
 
 
@@ -136,6 +145,25 @@
 </div>
 <!--End-->
 
+<!--back to top script-->
+<script>
+mybutton = document.getElementById("myBtn");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+</script>
+<!--End-->
 
         </div>
       </div>

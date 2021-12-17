@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ʕ◉ᴥ◉ʔ</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+  </head>
+  <body>
+<!--Navigation tab below-->
+    <div id="navigation">
+      <nav>
+        <ul>
+          <li><a href="../index.html">Main</a></li>
+          <li><a href="../aboutme.html">About Me</a></li>
+          <li class="dropdown">
+              <a href:"javascript:void(0)" class="dropbtn">Documentation</a>
+              <div class="dropdown-content">
+                <a href="web.html">Website<br>Development</a>
+                <a href="graphics_creation.html">Graphics<br>Creation</a>
+                <a href="cad.html">CAD</a>
+                <a class="active" href="printing.html">3D Printing</a>
+              </div>
+          </li>
+          <li><a href="../jwsitetemp/jwsite.html">Johnwhile template</a></li>
+          <li><a href="../tools.html">Tools</a></li>
+        </ul>
+      </nav>
+    </div>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<!--content-->
+<a name="top"></a>
+    <div id="header">
+      <br>
+      <h1>Documentation Page</h1>
+    </div>
+    <div id="container">
+      <div>
+        <h2>Web Development</h2>
+        <br>
+      </div>
+      <div id="content">
+
+        <!--Additive Manufacturing-->
+                <div id="box">
+                    <!--Title-->
+                      <div id="boxc">
+                      <h3 style="color:Indigo" id="am" align="center">Additive manufacturing</h3>
+                      </div>
+
+                    <!--Content-->
+                    <th>
+                    <div id="boxcc">
+                      <h4>
+                        Additive manufacturing (AM) is defined as joining material to make object from 3D model data, usually layers upon layer as opposed to subtractive.
+                        AM allows conformal cooling channels, functional complexity and consolidate designs to be printed while allowing integration of parts to reduce assembly cost and time.
+                        <br>
+                        <br>
+                        <div id="boxce">
+                        <table style="width:70%;"align="center">
+                          <tr>
+                            <th style="color:#3D8D40;">AM benefits includes:</th>
+                            <th style="color:#A1402B;">AM drawbacks includes:</th>
+                          </tr>
+                          <tr>
+                            <td>
+                              <ol>
+                                <li>Shape complexity</li>
+                                <li>Weight reduction</li>
+                                <li>Material complexity</li>
+                              </ol>
+                            </td>
+                            <td>
+                              <ol>
+                              <li>Poor mechanical properties</li>
+                              <li>Slow Printing</li>
+                              <li>Material limitation</li>
+                            </ol>
+                            </td>
+                          </tr>
+                          </table>
+                        </div>
+                      </h4>
+
+        <h4>
+          Before you start designing a model for 3d printing, there are some important things we must take note of to get a proper print.
+          In my case I know that the piece would be printed via material extrusion.<br>
+          </h4>
+        <div id="boxce">
+          <h4>
+          Things to take note of when designing a part for 3d printing:
+          <ul>
+          <li>Wall thickness to have a min of 1mm (any thinner and the part would be too fragile)</li>
+          <li>supports are required for parts with 45 degree overhang.</li>
+          <li>any engraving to have a min of 1mm width and 0.3 depth.</li>
+          <li>engraving is preferred over embossed.</li>
+          <li>any features to have a min of 2mm.</li>
+          <li>minimize the Z axis(height) and support structure to reduce the manufacturing cost.</li>
+        </ul>
+        </h4>
+        </div>
+        <br>
+        </div>
+        </div>
+        <!--End-->
+
+        <!--3d-printing with clean-up-->
+        <div id="box">
+        <div id="boxc" align="center">
+        <h3 style="color:Indigo" id="3dprinting">3D printing and clean up(WIP)</h3>
+        </div>
+        <div id="boxcc">
+        <h3 align="center">This is currently a WIP as the owner of the site might changing this layout to more user-friendly layout</h3>
+        </div>
+        </div>
+        <!--End-->
+
+<!--back to top script-->
+<script>
+mybutton = document.getElementById("myBtn");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+</script>
+<!--End-->
+
+      </div>
+    </div>
+    <body>
+    <footer>
+      <div id="footer">
+      Copyrights &copy; 2021 Ong Jing Kai.
+      </div>
+    </footer>
+    </html>

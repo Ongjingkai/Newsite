@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ʕ◉ᴥ◉ʔ</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+  </head>
+  <body>
+<!--Navigation tab below-->
+    <div id="navigation">
+      <nav>
+        <ul>
+          <li><a href="../index.html">Main</a></li>
+          <li><a href="../aboutme.html">About Me</a></li>
+          <li class="dropdown">
+              <a href:"javascript:void(0)" class="dropbtn">Documentation</a>
+              <div class="dropdown-content">
+                <a class="active" href="web_development.html">Website<br>Development</a>
+                <a href="graphics_creation.html">Computer<br>Graphics</a>
+                <a href="cad.html">CAD</a>
+                <a href="printing.html">3D Printing</a>
+              </div>
+          </li>
+          <li><a href="../jwsitetemp/jwsite.html">Johnwhile template</a></li>
+          <li><a href="../tools.html">Tools</a></li>
+        </ul>
+      </nav>
+    </div>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<!--content-->
+<a name="top"></a>
+    <div id="header">
+      <br>
+      <h1>Documentation Page</h1>
+    </div>
+    <div id="container">
+      <div>
+        <h2>Web Development</h2>
+        <br>
+      </div>
+      <div id="content">
+
+
+<!--HTML & CSS-->
+<div id="box">
+<div id="boxc" align="center">
+<h3 style="color:Indigo" id="html">HTML & CSS</h3>
+</div>
+<div id="boxcc">
+  <table class="GeneratedTable">
+    <tbody>
+      <tr>
+      <td><h5 align="center">HTML</h5></td>
+      <td><h5>The standard markup language for Web pages is HTML (Hypertext Mark-Up Language).
+      You can make your own website using HTML. It also allows users to create links (points)
+      to other websites, materials, photos, video, and audio.<br>
+      <span style="color:#66A2B1">To learn more about HTML visit Jake Wright's <a href="https://www.youtube.com/watch?v=bWPMSSsVdPk" style="color:#66A2B1">video</a>.</span>
+    </h5></td>
+    </tr>
+    <tr>
+      <td><h5 align="center">CSS</h5></td>
+      <td><h5>The language that we use to style an HTML document is CSS. CSS specifies how HTML elements should appear. This is used to make the website more organized and user-friendly.<br>
+      <span style="color:#66A2B1">To learn more about CSS visit Jake Wright's <a href="https://www.youtube.com/watch?v=0afZj1G0BIE" style="color:#66A2B1">video</a>.</span>
+      </h5></td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+</div>
+<!--End-->
+
+
+
+<!--back to top script-->
+<script>
+mybutton = document.getElementById("myBtn");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+</script>
+<!--End-->
+
+      </div>
+    </div>
+    <body>
+    <footer>
+      <div id="footer">
+      Copyrights &copy; 2021 Ong Jing Kai.
+      </div>
+    </footer>
+    </html>

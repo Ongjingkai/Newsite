@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ʕ◉ᴥ◉ʔ</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+  </head>
+  <body>
+<!--Navigation tab below-->
+    <div id="navigation">
+      <nav>
+        <ul>
+          <li><a href="../index.html">Main</a></li>
+          <li><a href="../aboutme.html">About Me</a></li>
+          <li class="dropdown">
+              <a href:"javascript:void(0)" class="dropbtn">Documentation</a>
+              <div class="dropdown-content">
+                <a href="web.html">Website<br>Development</a>
+                <a class="active" href="graphics_creation.html">Graphics<br>Creation</a>
+                <a href="cad.html">CAD</a>
+                <a href="printing.html">3D Printing</a>
+              </div>
+          </li>
+          <li><a href="../jwsitetemp/jwsite.html">Johnwhile template</a></li>
+          <li><a href="../tools.html">Tools</a></li>
+        </ul>
+      </nav>
+    </div>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<!--content-->
+<a name="top"></a>
+    <div id="header">
+      <br>
+      <h1>Documentation Page</h1>
+    </div>
+    <div id="container">
+      <div>
+        <h2>Web Development</h2>
+        <br>
+      </div>
+      <div id="content">
+
+
+        <!--Creation of logo-->
+                  <div id="box">
+                    <table>
+                      <!--Table Left-->
+                      <th align=left>
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/dHgHw3cs_ck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      </th>
+                      <!--Table Right-->
+                      <th>
+                        <div id="boxc">
+                        <h3 style="color:Indigo" id="logo_creation">This is how my logo is created!</h3>
+                      </div>
+                      <div id="boxcc">
+                        <h4>This video shows you how my logo is created using <a href="https://vectr.com/design/editor/b96fe34c-e89f-4887-a6e3-140230e438bf">Vectr</a> before creating the logo, I <s> watched </s><br>skim through a video tutorial
+                          on <a href="https://www.youtube.com/watch?v=g9dfJhvmQEQ">logo creation using vectr</a>.
+                        </h4>
+                        <div id="boxc">
+                        <h3 style="color:Indigo" align="center">About Vectr</h3>
+                        </div>
+                        <h4>Vectr is a free graphics program that allows you to make vector images quickly and effortlessly. It's a simple yet powerful cross-platform web and desktop application for bringing your ideas to life.<br>
+                          Vectr can be used to create clean and crisp logos of any scale and can is easy to learn from just a simple youtube video.</h4>
+                      </div>
+                        <ul align=left>
+                        </ul>
+                      </th>
+                  </table>
+                </div>
+        <!--End-->
+
+        <!--Using Gimp-->
+        <div id="box">
+            <!--Title-->
+              <div id="boxc">
+              <h3 style="color:Indigo" id="gimp" align="center">Using Gimp to remove background</h3>
+              </div>
+
+              <!--Introduction-->
+              <th>
+              <div id="boxcc">
+                <h4 align="center">This is to show how I used Gimp to change the background from my selfi.<br>Get to know your tools before you start working!</h4>\
+
+        <div id="boxce">
+                <table align="center">
+                  <tr>
+                    <th><img id="flatimages" src="../images/gimp/tools.png" alt="tools" width="550" height="450"></th>
+                    <th><h3>Importing the photo in is as easy as dragging it in!<br>
+                      Remember to export your photo as .png once you finish your work.
+                      <ol>
+                        <li>Shift+Middle mouse key to zoom in</li>
+                        <li>Middile mouse key scroll up or down</li>
+                        <li>You are going to use Shift+O a lot</li>
+                      </ol>
+                    </h3>
+
+                  </tr>
+
+                </table>
+        </div>
+        <br>
+                <!--Step 1-->
+                <div id="boxce">
+                <h3 align="center">Step 1</h3>
+                <br>
+                <img id="flatimages" src="../images/gimp/step1.png" alt="tools" width="450" height="350">
+                <h3 align="center">Import your image by dragging it in.</h3>
+                </div>
+                <!--End-->
+        <br>
+                <!--Step 2-->
+                <div id="boxce">
+                <h3 align="center">Step 2</h3>
+                <br>
+                <img id="flatimages" src="../images/gimp/step2.png" alt="tools" width="450" height="350">
+                <h3 align="center">Under Color tools, select "select by color(shift+o)" select and cut out the background</h3>
+                </div>
+                <!--End-->
+        <br>
+                <!--Step 3-->
+                <div id="boxce">
+                <h3 align="center">Step 3</h3>
+                <br>
+                <img id="flatimages" src="../images/gimp/step3.png" alt="tools" width="450" height="350">
+                <h3 align="center">Import the background by dragging it in and use the scaling too(Shift+S) to scale the image to your liking.</h3>
+                </div>
+                <!--End-->
+        <br>
+                <!--Step 4-->
+                <div id="boxce">
+                <h3 align="center">Step 4</h3>
+                <br>
+                <img id="flatimages" src="../images/gimp/step4.png" alt="tools" width="450" height="350">
+                <h3 align="center">If done correctly, the background layer should be behind your selfie giving the photo a new background.<br>If the background appears before the selfie, move the layer back in the layer selection menu.</h3>
+                </div>
+                <!--End-->
+
+        </div>
+        </div>
+        </div>
+        <!--End-->
+
+
+<!--back to top script-->
+<script>
+mybutton = document.getElementById("myBtn");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+</script>
+<!--End-->
+
+      </div>
+    </div>
+    <body>
+    <footer>
+      <div id="footer">
+      Copyrights &copy; 2021 Ong Jing Kai.
+      </div>
+    </footer>
+    </html>

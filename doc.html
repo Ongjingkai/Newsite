@@ -12,12 +12,22 @@
         <ul>
           <li><a href="index.html">Main</a></li>
           <li><a href="aboutme.html">About Me</a></li>
-          <li><a class="active" href="doc.html">Documentation</a></li>
+          <li class="dropdown">
+              <a class="active" href:"javascript:void(0)" class="dropbtn">Documentation</a>
+              <div class="dropdown-content">
+                <a href="projects/web.html">Website<br>Development</a>
+                <a href="projects/graphics_creation.html">Computer<br>Graphics</a>
+                <a href="projects/cad.html">CAD</a>
+                <a href="projects/printing.html">3D Printing</a>
+              </div>
+          </li>
           <li><a href="jwsitetemp/jwsite.html">Johnwhile template</a></li>
           <li><a href="tools.html">Tools</a></li>
         </ul>
       </nav>
     </div>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 <!--content-->
 <a name="top"></a>
@@ -106,11 +116,6 @@
         </div>
 <!--End-->
 
-<!--back to top-->
-<div id="boxc">
-<h4 align="center"><a href="#top">Back to top of page</a></h4>
-</div>
-<!--End-->
 
 <!--Fusion 360-->
         <div id="box">
@@ -135,12 +140,6 @@
               </th>
             </table>
           </div>
-<!--End-->
-
-<!--back to top-->
-<div id="boxc">
-<h4 align="center"><a href="#top">Back to top of page</a></h4>
-</div>
 <!--End-->
 
 <!--Additive Manufacturing-->
@@ -203,12 +202,6 @@
 </div>
 <br>
 </div>
-</div>
-<!--End-->
-
-<!--back to top-->
-<div id="boxc">
-<h4 align="center"><a href="#top">Back to top of page</a></h4>
 </div>
 <!--End-->
 
@@ -347,11 +340,6 @@
 </div>
 <!--End-->
 
-<!--back to top-->
-<div id="boxc">
-<h4 align="center"><a href="#top">Back to top of page</a></h4>
-</div>
-<!--End-->
 
 <!--Using Gimp-->
 <div id="box">
@@ -435,12 +423,25 @@
 </div>
 <!--End-->
 
-<!--back to top-->
-<div id="boxc">
-<h4 align="center"><a href="#top">Back to top of page</a></h4>
-</div>
-<!--End-->
+<!--back to top script-->
+<script>
+mybutton = document.getElementById("myBtn");
 
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+</script>
+<!--End-->
 
       </div>
     </div>
