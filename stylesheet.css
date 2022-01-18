@@ -64,6 +64,13 @@ align-items: center;
 padding: 10px;
 }
 
+pre {
+    display: block;
+    font-family: monospace;
+    white-space: pre;
+    margin: 1em 0px;
+}
+
 #dnav{
 padding: 5px;
 background-color: #918E85;

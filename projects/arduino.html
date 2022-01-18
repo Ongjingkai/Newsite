@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ʕ◉ᴥ◉ʔ</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+  </head>
+  <body>
+<!--Navigation tab below-->
+    <div id="navigation">
+      <nav>
+        <ul>
+          <li><a href="../index.html">Main</a></li>
+          <li><a href="../aboutme.html">About Me</a></li>
+          <li class="dropdown">
+              <a href:"javascript:void(0)" class="dropbtn">Documentation</a>
+              <div class="dropdown-content">
+                <a href="web.html">Website<br>Development</a>
+                <a href="graphics_creation.html">Computer<br>Graphics</a>
+                <a href="cad.html">CAD</a>
+                <a href="printing.html">3D Printing</a>
+                <a href="musicbox.html">Music Box</a>
+                <a href="electronics.html">Electronics</a>
+                <a class="active" href="arduino.html">Arduino</a>
+              </div>
+          </li>
+          <li class="dropdown">
+            <a href:"javascript:void(0)" class="dropbtn">Final Project</a>
+            <div class="dropdown-content">
+            <a href="../finalproject/proposal.html">Project Proposal</a>
+            <a href="../placeholder.html">WIP</a>
+            <a href="../placeholder.html">WIP</a>
+            <a href="../placeholder.html">WIP</a>
+            <a href="../placeholder.html">WIP</a>
+            <a href="../placeholder.html">WIP</a>
+          </div>
+          </li>
+          <li><a href="../jwsitetemp/jwsite.html">Johnwhile template</a></li>
+          <li><a href="../tools.html">Tools</a></li>
+        </ul>
+      </nav>
+    </div>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<!--content-->
+<a name="top"></a>
+    <div id="header">
+      <br>
+      <h1>Documentation Page</h1>
+    </div>
+    <div id="container">
+      <div>
+        <h2>Web Development</h2>
+        <br>
+      </div>
+      <div id="content">
+
+
+        <h3 align="center">(^∇^*=) This page is rather long! Free free to select the option from the navigation bar below. (=*^∇^)</h3>
+      </div>
+      <div id="content">
+
+      <!--sub navbar for the page to make it easier for me to look at any feature I made-->
+          <div id="dnav">
+            <ul>
+                <li><a href="#555timer">555 Timer</a></li>
+                <li><a href="#ss">1 Switch 4 Outcomes</a></li>
+              </ul>
+          </div>
+<!--End-->
+
+
+<!--555 timer assigment-->
+<div id="box">
+<div id="boxc" align="center">
+<h3 style="color:Indigo" id="555timer">555 timer assigment</h3>
+</div>
+<div id="boxcc">
+  <h3 align="center">We have to rig up and create a schematic into TinkerCAD circuit. <br> Below is chip arragement and schematic.</h3>
+<table>
+  <tr>
+    <th><img id="flatimages" src="../images/arduino/555.png" alt="tools" width="550" height="450"></th>
+    <th><img id="flatimages" src="../images/arduino/555setting.png" alt="tools" width="550" height="450"></th>
+  </tr>
+</table>
+<h2 align="center">Finished Circuit</h2>
+<h3 align="center">All the component are labeled<br>
+<iframe width="725" height="453" src="https://www.tinkercad.com/embed/1xspiKYsmIq?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></h3>
+<h3 align="center">Click <a href="https://www.tinkercad.com/things/1xspiKYsmIq">here</a> to <strike>copy</strike> see my circuit. (ಠ‿↼)</h3>
+</div>
+<!--End-->
+
+
+<!--1 switch many mode-->
+<div id="box">
+<div id="boxc" align="center">
+<h3 style="color:Indigo" id="ss">Single switch 4 outcomes</h3>
+</div>
+<div id="boxcc">
+  <h3 align="center">Our assigment is to use an UNO arduino to show different pattens with just 1 switch
+<iframe width="725" height="453" src="https://www.tinkercad.com/embed/1uou2CQveDq?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" id="this"></iframe></h3>
+<h3 align="center">Click <a href="https://www.tinkercad.com/things/1uou2CQveDq">here</a> to <strike>copy</strike> see my circuit. (ಠ‿↼)</h3><br>
+<div id="boxce">
+<h3 align="center">I program the Arduino to have 5(including switching everything off) modes in total</h3>
+<h3><ol>
+<li>All LED off</li>
+<li>Red LED on, everything else off</li>
+<li>Green LED on, everything else off</li>
+<li>Yellow LED on, everything else off</li>
+<li>All Led till turn on in sequence before switching off</li>
+</ol> </h3>
+</div>
+<h3 align="center">This is the code I used to make it happen</h3>
+<div id="boxce">
+<pre align="center">
+  <code>//define your shit first
+#define RLED 8
+#define GLED 9
+#define YLED 10
+#define SWITCH 3
+
+
+int count = 0; //For counting
+int state = HIGH;
+int runway = 400;
+
+void setup()
+{
+  pinMode(RLED ,OUTPUT);
+  pinMode(GLED ,OUTPUT);
+  pinMode(YLED ,OUTPUT);
+  pinMode(SWITCH ,INPUT_PULLUP);
+  Serial.begin(9600);
+  Serial.println("Auduino plugged in");
+  decode(count);
+}
+
+
+void loop()
+{
+  if(digitalRead(SWITCH) == LOW){
+    // switch pressed
+    if (state == HIGH){
+      // ok, lets process
+      state = LOW;
+    }
+    else {
+      // ignore, since state = LOW
+    }
+  }
+  else {
+    // switch is at normal
+    if (state == LOW){
+      // register keypress
+      count = (count + 1) % 5;
+      decode(count);
+      state = HIGH;
+    }
+  }
+}
+
+void decode(int v)
+{
+  switch(v){
+    case 0:
+    	digitalWrite(RLED, 0);
+    	digitalWrite(GLED, 0);
+    	digitalWrite(YLED, 0);
+    	Serial.println("Case 0 working");
+    	break;
+
+    case 1:
+    	digitalWrite(RLED, 1);
+    	digitalWrite(GLED, 0);
+    	digitalWrite(YLED, 0);
+    Serial.println("Case 1 working");
+    	break;
+
+    case 2:
+    	digitalWrite(RLED, 0);
+    	digitalWrite(GLED, 1);
+    	digitalWrite(YLED, 0);
+    Serial.println("Case 2 working");
+    	break;
+
+    case 3:
+    	digitalWrite(RLED, 0);
+    	digitalWrite(GLED, 0);
+   		digitalWrite(YLED, 1);
+    Serial.println("Case 3 working");
+    	break;
+
+/*There is a better way of doing the loop but I just drank some beer*/
+    case 4:
+    digitalWrite(YLED, 0);
+    delay(500);
+    Serial.println("Case 4 working");
+   		digitalWrite(RLED, 1);
+        delay(runway);
+    	digitalWrite(GLED, 1);
+        delay(runway);
+      	digitalWrite(YLED, 1);
+        delay(runway);
+        digitalWrite(RLED, 0);
+        delay(runway);
+        digitalWrite (GLED, 0);
+        delay(runway);
+        digitalWrite (YLED, 0);
+        Serial.println("Loop is working");
+   	 break;
+  }
+}
+
+
+
+
+/*The code is written in a way for me to edit it quickly and infrom me
+if there is any error when testing edit on ur free will because I can't be bothered*/
+    </code>
+</pre>
+</div>
+<h3 align="center">To see how it functions, make the circuit (or copy) like the one I made <a href="#this">above<a> and paste it into the code<br>(remember to switch to text!)</h3>
+<img id="flatimages" src="../images/arduino/working.gif" alt="tools" width="550" height="450">
+<h3 align="center">You could try and build it using the arduino your teacher gave you.</h3>
+
+
+
+
+
+
+</div>
+</div>
+</div>
+<!--back to top script-->
+<script>
+mybutton = document.getElementById("myBtn");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+</script>
+<!--End-->
+
+      </div>
+    </div>
+    <body>
+    <footer>
+      <div id="footer">
+      Copyrights &copy; 2021 Ong Jing Kai.
+      </div>
+    </footer>
+    </html>
