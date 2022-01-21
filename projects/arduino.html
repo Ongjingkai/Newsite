@@ -66,6 +66,7 @@
             <ul>
                 <li><a href="#555timer">555 Timer</a></li>
                 <li><a href="#ss">1 Switch 4 Outcomes</a></li>
+                <li><a href="#remote">IR Remote</a></li>
               </ul>
           </div>
 <!--End-->
@@ -223,15 +224,135 @@ if there is any error when testing edit on ur free will because I can't be bothe
 <h3 align="center">To see how it functions, make the circuit (or copy) like the one I made <a href="#this">above<a> and paste it into the code<br>(remember to switch to text!)</h3>
 <img id="flatimages" src="../images/arduino/working.gif" alt="tools" width="550" height="450">
 <h3 align="center">You could try and build it using the arduino your teacher gave you.</h3>
-
-
-
-
-
-
 </div>
 </div>
 </div>
+
+<!--remote-->
+<div id="box">
+<div id="boxc" align="center">
+<h3 style="color:Indigo" id="remote">IR Remote</h3>
+</div>
+<div id="boxcc">
+  <h3 align="center">This is here to show how an IR remote works in case you want to use it for your project
+<iframe width="725" height="453" src="https://www.tinkercad.com/embed/4bOXdmqbcBF?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" id="tc"></iframe></h3>
+<h3 align="center">Click <a href="https://www.tinkercad.com/things/4bOXdmqbcBF">here</a> to <strike>copy</strike> see my circuit. (ಠ‿↼)</h3><br>
+<div id="boxce">
+<h3 align="center">Pressing certain numbers would show certain effects</h3>
+<h3><ol>
+<li>Toggle Red Led on and off</li>
+<li>Light up Greed led and off</li>
+<li>Toggle Blue Led on and off</li>
+<li>Light show ( ͡◉ ͜ʖ ͡◉) (Start the Simulation to see!)</li>
+</ol> </h3>
+<h3 align="center">This are all the Hax key for all the button on a IR remote!
+<img id="flatimages" src="../images/arduino/remotecode.PNG" alt="remoteHax code" width="550" height="450">
+</h3>
+
+</div>
+<h3 align="center">This is the code I used to make it happen</h3>
+<div id="boxce">
+<pre align="center">
+  <code>
+/*You have to include this for remote to work*/
+#include < IRremote.h> //remove spacing before starting
+//To indicate IR receving pin
+const int RECV_PIN = 11;
+
+// Define IR Receiver
+IRrecv irrecv(RECV_PIN);
+// Defind Results object
+decode_results results;
+
+//defining LED
+
+const int B = 4;
+const int G = 5;
+const int R = 6;
+
+//Start things at false
+int toggle = false;
+
+
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(R, OUTPUT);
+  pinMode(G, OUTPUT);
+  pinMode(B, OUTPUT);
+  irrecv.enableIRIn(); // enable the IR receviver
+  Serial.println("Program started"); //For debugging and checking if things work
+}
+
+
+
+void loop()
+{
+  // detect IRRemote keypress
+  if (irrecv.decode(&results))
+  {
+    // print out code
+    Serial.println(results.value, HEX);
+    switch(results.value){
+      //if button "1" is clicked
+      case 0xFD08F7 :
+        if (toggle)
+          digitalWrite(R, LOW);
+        else
+          digitalWrite(R, HIGH);
+        toggle = !toggle;
+        break;
+      //If button "2" is clicked
+      case 0xFD8877 :
+          digitalWrite(G , HIGH);
+          delay(500);
+          digitalWrite(G , LOW);
+          delay(500);
+          break;
+      //If button "3" is clicked
+      case 0xFD48B7 :
+      if (toggle)
+          digitalWrite(B, LOW);
+        else
+          digitalWrite(B, HIGH);
+        toggle = !toggle;
+        break;
+      //If button "4" is clicked
+  	   case 0xFD28D7 :
+		if (toggle)
+          digitalWrite(R, LOW);
+        else
+          digitalWrite(R, HIGH);
+      	delay(300);
+      	digitalWrite(R, LOW);
+      	delay(300);
+      	digitalWrite(G, HIGH);
+      	delay(300);
+      	digitalWrite(G, LOW);
+      	delay(300);
+      	digitalWrite(B, HIGH);
+     	 delay(300);
+      	digitalWrite(B, LOW);
+        toggle = !toggle;
+
+      }
+      irrecv.resume();
+  }
+}
+
+    </code>
+</pre>
+</div>
+<h3 align="center">To see how it functions, make the circuit (or copy) like the one I made <a href="#tc">above<a> and paste it into the code<br>(remember to switch to text!)</h3>
+<!--Add a gif of the working version here-->
+<h3 align="center">You could try and build it using the arduino your teacher gave you.</h3>
+</div>
+</div>
+</div>
+
+
+
+
 <!--back to top script-->
 <script>
 mybutton = document.getElementById("myBtn");
