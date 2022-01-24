@@ -69,6 +69,7 @@
                 <li><a href="#ss">1 Switch 4 Outcomes</a></li>
                 <li><a href="#remote">IR Remote</a></li>
                 <li><a href="#usss">UltraSonic Sensor</a></li>
+                <li><a href="#strips">LED Strips</a></li>
               </ul>
           </div>
 <!--End-->
@@ -436,13 +437,101 @@ void loop()
 <h3 align="center">You could try and build it using the arduino your teacher gave you.</h3>
 </div>
 </div>
+
+
+<!--UltraSonic Sensor-->
+<div id="box">
+<div id="boxc" align="center">
+<h3 style="color:Indigo" id="strips">LED Strips</h3>
+</div>
+<div id="boxcc">
+  <h3 align="center">This is here to show how an Ultrasonic Sensor in case you want to use it for your project
+<<iframe width="725" height="453" src="https://www.tinkercad.com/embed/7i6edKshXuY?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></h3>
+<h3 align="center">Click <a href="https://www.tinkercad.com/things/7i6edKshXuY">here</a> to <strike>copy</strike> see my circuit. (ಠ‿↼)</h3><br>
+<div id="boxce">
+<h3 align="center">Going in range would trigger certain reactions!</h3>
+<h3><ul>
+<li>Going below 100 would light up the red LED</li>
+<li>Going above 80 would light up the green LED</li>
+</ul> </h3>
+
+</div>
+<h3 align="center">This is the code I used to make it happen</h3>
+<div id="boxce">
+<pre align="center">
+  <code>
+    //Insert this to use NeoPixel(LED STRIPS)
+#include <Adafruit_NeoPixel.h>
+
+//define your stuff here
+const int LEDSTRIPS = 8;//Using PIN 8 for this project
+const int NUMOFLEDS = 12; //The number of LEDS, in this case 4*3
+
+//Do I really need to explain this? or could you just copy and paste this in
+Adafruit_NeoPixel np = Adafruit_NeoPixel(
+		NUMOFLEDS, LEDSTRIPS, NEO_GRB + NEO_KHZ800);
+
+
+void setup()
+{
+  Serial.begin(9600);//for debugging
+  np.setBrightness(128);//Brightness of the LED
+}
+
+
+
+void loop()
+{
+  //this loop goes from purple>cyan>vomit yellow
+  unsigned long c = np.Color(148, 25, 204);
+  flash(c);
+  c = np.Color(112, 236, 204);
+  flash(c);
+  c = np.Color(207, 239, 74);
+  flash(c);
+  // scroll random lights
+  for (int i=0; i< 10; ++i)
+    runLights();
+
+}
+
+
+void flash(unsigned long c)
+{
+  np.fill(c, 0, NUMOFLEDS);
+  np.show();//display the LEDS
+  delay(500);
+  np.clear();//Clear the LEDS
+  np.show();
+  delay(500);
+}
+
+void runLights()
+{
+  const int DLY = 100;
+  int r, g, b;
+  // obtain a random color
+  r = random(256); g = random(256); b = random(256);
+  unsigned long c = np.Color(r,g,b);
+  for (int p=0; p < NUMOFLEDS; ++p)
+  {
+    np.setPixelColor(p, c);
+    np.show();
+    delay(DLY);
+  }
+}
+
+    </code>
+</pre>
+</div>
+<h3 align="center">To see how it functions, make the circuit (or copy) like the one I made <a href="#uss">above<a> and paste it into the code<br>(remember to switch to text!)</h3>
+
+<h3 align="center">You could try and build it using the arduino your teacher gave you.</h3>
+</div>
 </div>
 
 
-
-
-
-
+</div>
 <!--back to top script-->
 <script>
 mybutton = document.getElementById("myBtn");
