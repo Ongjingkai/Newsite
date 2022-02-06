@@ -30,7 +30,7 @@
         <div class="dropdown-content">
         <a href="proposal.html">Project Proposal</a>
         <a href="design_process.html">Design Process</a>
-        <a class="active" href="../3dprintedparts.html">3D Printed Parts</a>
+        <a class="active" href="3dprintedparts.html">3D Printed Parts</a>
         <a href="../placeholder.html">WIP</a>
         <a href="../placeholder.html">WIP</a>
         <a href="../placeholder.html">WIP</a>
@@ -42,6 +42,8 @@
   </nav>
 </div>
 
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 <!--content-->
 
 <div id="header">
@@ -50,65 +52,217 @@
 </div>
 <div id="container">
   <div>
-    <h2>Designing</h2>
+    <h2>Designing the spacers</h2>
     <br>
   </div>
   <div id="content">
+    <!--sub navbar for the page to make it easier for me to look at any feature I made-->
+        <div id="dnav">
+          <ul>
+              <li><a href="#printingguild">Printing Guild Lines</a></li>
+              <li><a href="#spacerv1">Spacers V1</a></li>
+              <li><a href="#spacerv2">Spacers V2</a></li>
+              <li><a href="#fusion">Using Fusion to print in cura</a></li>
+              <li><a href="#sketch">Sketchs</a></li>
+            </ul>
+        </div>
+<!--End-->
 
-    <!--Design Process-->
+    <!--Additive Manufacturing-->
             <div id="box">
                 <!--Title-->
                   <div id="boxc">
-                  <h3 style="color:Indigo" align="center">Design Process</h3>
+                  <h3 style="color:Indigo" id="printingguild" align="center">Printing guild lines</h3>
                   </div>
 
                 <!--Content-->
                 <th>
                 <div id="boxcc">
-                  <h4 align="center">
-                    Before I start designing anything, I always do research and write out all limitations and issue I might face.<br>
-                    Note down the list of requirements the item is required to help with the skatching and prototyping process.
-                    </h4>
-                    <div id="boxce">
-                    <h4 align="center">This is my design process if you would like to follow along</h4>
-                      <h4>
-                      <ol>
-                        <li>List down requirements, expectation, limitations of the item</li>
-                        <li>Research on item done by others or your past projects.</li>
-                        <li>Sketches and protyping(My favorate part)</li>
-                        <li>Test fit, final modifications, data collection and Documentation<br>(Repeat step 3 if you have to)</li>
-                        <li>Item completed</li>
-                        </ol>
-                        </h4>
-                    </div>
+                  <h4>
+                    Additive manufacturing (AM) is defined as joining material to make object from 3D model data, usually layers upon layer as opposed to subtractive.
+                    AM allows conformal cooling channels, functional complexity and consolidate designs to be printed while allowing integration of parts to reduce assembly cost and time.
                     <br>
-                  </div>
-                </div>
-                </div>
+                    <br>
+                    <div id="boxce">
+                    <table style="width:70%;"align="center">
+                      <tr>
+                        <th style="color:#3D8D40;">AM benefits includes:</th>
+                        <th style="color:#A1402B;">AM drawbacks includes:</th>
+                      </tr>
+                      <tr>
+                        <td>
+                          <ol>
+                            <li>Shape complexity</li>
+                            <li>Weight reduction</li>
+                            <li>Material complexity</li>
+                          </ol>
+                        </td>
+                        <td>
+                          <ol>
+                          <li>Poor mechanical properties</li>
+                          <li>Slow Printing</li>
+                          <li>Material limitation</li>
+                        </ol>
+                        </td>
+                      </tr>
+                      </table>
+                    </div>
+                  </h4>
+
+    <h4>
+      Before you start designing a model for 3d printing, there are some important things we must take note of to get a proper print.
+      In my case I know that the piece would be printed via material extrusion.<br>
+      </h4>
+    <div id="boxce">
+      <h4>
+      Things to take note of when designing a part for 3d printing:
+      <ul>
+      <li>Wall thickness to have a min of 1mm (any thinner and the part would be too fragile)</li>
+      <li>supports are required for parts with 45 degree overhang.</li>
+      <li>any engraving to have a min of 1mm width and 0.3 depth.</li>
+      <li>engraving is preferred over embossed.</li>
+      <li>any features to have a min of 2mm.</li>
+      <li>minimize the Z axis(height) and support structure to reduce the manufacturing cost.</li>
+    </ul>
+    </h4>
+    </div>
+    <br>
+    </div>
+    </div>
     <!--End-->
 
-    <!--Getting the Idea-->
+    <!--spacers v1-->
     <div id="box">
         <!--Title-->
           <div id="boxc">
-          <h3 style="color:Indigo" align="center">Idea process</h3>
+          <h3 style="color:Indigo" id="spacerv1" align="center">Spacers V1</h3>
           </div>
 
         <!--Content-->
         <th>
         <div id="boxcc">
           <h4 align="center">
-            I have a lot of ideas for the project, but I'm limited by time and EST comming in 2 weeks.
+            The first design was easy to make and is ready to be printed.
             </h4>
             <div id="boxce">
-            <h4 align="center">For this project, I would be selecting a simple design that uses arduino to change the lights and other features</h4>
-              <img id="flatimages" src="../images/finalproject/differentidea.jpeg" alt="di" width="550" height="450">
               <br>
+              <table align="center">
+                <tr>
+              <th><img id="flatimages" src="../images/finalproject/firstissue.png" alt="fi" width="350" height="450"></th>
+              <th><img id="flatimages" src="../images/finalproject/toolong.jpg" alt="fi" width="550" height="450"></th>
+              <tr>
+              </table>
+              <h4 align="center">The design is simple and yet I ended up rejecting it. <strike>Do I really need to explain why?</strike><br>Because it would talk over 6 hours just to print a single part and would require a ton of material just for a single part.</h4>
             </div>
-            <br>
-            <br>
           </div>
 
+<!--END-->
+
+<!--spacers v2-->
+<div id="box">
+    <!--Title-->
+      <div id="boxc">
+      <h3 style="color:Indigo" id="spacerv2" align="center">Spacers V2</h3>
+      </div>
+
+    <!--Content-->
+    <th>
+    <div id="boxcc">
+      <h4 align="center">
+        The second design is then modified from version 1 to make my life easier
+        </h4>
+        <div id="boxce">
+          <br>
+          <table align="center">
+            <tr>
+          <th><img id="flatimages" src="../images/finalproject/2ndversion.PNG" alt="fi" width="350" height="450"></th>
+          <th><img id="flatimages" src="../images/finalproject/justnice.jpg" alt="fi" width="550" height="450"></th>
+          <tr>
+          </table>
+          <h4 align="center">New design requires you to print it 4 times, but it's a lot faster and material friendly and can be finish in half a day.
+          The printers in the lab comes equipped with a glass printing bed, that allows the sides of the part to be smooth without sending. Please remember to use the <a href="#printingguild">guild lines<a> when designing your parts</h4>
+        </div>
+        <h4 align="center">
+        <iframe src="https://ichat1898.autodesk360.com/shares/public/SH35dfcQT936092f0e43d3f896a532b1a1a8?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+          <br>If you want to download holders for yourself click <a  href="https://a360.co/3rv6rPK">here!</a></h4>
+      </div>
+      </div>
+
+<!--END-->
+
+
+<!--3d print yoou parts-->
+<div id="box">
+    <!--Title-->
+      <div id="boxc">
+      <h3 style="color:Indigo" id="fusion" align="center">Using Fusion to print in cura</h3>
+      </div>
+
+      <!--Introduction-->
+      <th>
+      <div id="boxcc">
+        <h4 align="center">This is to show how I used Fusion to export parts to cura to 3D print</h4>
+<br>
+        <!--Step 1-->
+        <div id="boxce">
+        <h3 align="center">Step 1</h3>
+        <br>
+        <img id="flatimages" src="../images/finalproject/3dprinttut1.png" alt="tools" width="450" height="350">
+        <h3 align="center">Select the option "3D print" from the option menu like the photo above</h3>
+        </div>
+        <!--End-->
+<br>
+        <!--Step 2-->
+        <div id="boxce">
+        <h3 align="center">Step 2</h3>
+        <br>
+        <img id="flatimages" src="../images/finalproject/3dprinttut2.png" alt="tools" width="450" height="350">
+        <h3 align="center">Select "STL (binary)" as your format and choose "cura(or your 3dprinting software)" under print Unity.</h3>
+        </div>
+        <!--End-->
+<br>
+        <!--Step 3-->
+        <div id="boxce">
+        <h3 align="center">Step 3</h3>
+        <br>
+        <img id="flatimages" src="../images/finalproject/cura.jpeg" alt="tools" width="450" height="350">
+        <h3 align="center">If done correctly, your part should appear in cura. All thats left to do is to choose the best printing side(This part does not require any support) and slice</h3>
+        </div>
+        <!--End-->
+<br>
+        <!--Step 4-->
+        <div id="boxce">
+        <h3 align="center">Step 4</h3>
+        <br>
+
+
+        </div>
+        <!--End-->
+
+</div>
+</div>
+</div>
+
+<!--END-->
+
+<!--skatches-->
+<div id="box">
+    <!--Title-->
+      <div id="boxc">
+      <h3 style="color:Indigo" id="sketch" align="center">Spacers sketch</h3>
+      </div>
+
+    <!--Content-->
+    <th>
+    <div id="boxcc">
+      <h4 align="center">
+        This are the sketch for my spacers
+        </h4>
+        <div id="boxce">
+          <br>
+          <img id="flatimages" src="../images/finalproject/skatches.jpeg" alt="fi" width="350" height="450">
+        </div>
+      </div>
 
 <!--END-->
 
@@ -116,67 +270,36 @@
 
 
 
-    <!--Designing my shadow frame-->
-            <div id="box">
-                <!--Title-->
-                  <div id="boxc">
-                  <h3 style="color:Indigo" align="center">Designing my Shadow Frame</h3>
-                  </div>
-
-    <!--Listing-->
-                <!--Content-->
-                <th>
-                <div id="boxcc">
-                  <div id="boxc">
-                  <h4 align="center">
-                    List of requirements, expectations and Limitations</h4>
-                  </div>
-                      <table class="GeneratedTable" align="center">
-                        <thead>
-                          <tr>
-                            <th>Requirements</th>
-                            <th>Expectations</th>
-                            <th>Limitations</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>Scenes must be interchangeable</td>
-                            <td>Held together using only glue and slots</td>
-                            <td>Size to contain art from a A5 paper</td>
-                          </tr>
-                          <tr>
-                            <td>LED must be able to be controled using IR remote</td>
-                            <td>Slots to program more patten in the future</td>
-                            <td>Drawn and modelled in Fusion 360</td>
-                          </tr>
-                          <tr>
-                            <td>Must be lasercut and 3D printed</td>
-                            <td>Box to be connected via tabs</td>
-                            <td>Must not be too heavy</td>
-                          </tr>
-                          <tr>
-                            <td>Play music</td>
-                            <td>Stylish to fit at a nightstand</td>
-                            <td>Material to be only from FabLab</td>
-                          </tr>
-                          <tr>
-                            <td>Allows future modifications</td>
-                            <td></td>
-                            <td>Cheap and easy to replicate</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                      </div>
-  <!--End-->
-
 
 
 
 </div>
 </div>
 </div>
-    <body>
+
+
+<!--back to top script-->
+<script>
+mybutton = document.getElementById("myBtn");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+</script>
+<!--End-->
+
+
+
 
 
     <footer>
